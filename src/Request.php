@@ -6,15 +6,15 @@ use Illuminate\Http\Request as BaseRequest;
 
 class Request {
 	
-	public function __construct()
+	public static function capture()
 	{
-		$request = BaseRequest::create();		
-		$this->sanitize($request);
+		$request = BaseRequest::createFromGlobals();		
+		self::sanitize($request);
 		
 		return $request;
 	}
 		
-	private function sanitize(Request $request) 
+	private static function sanitize(BaseRequest $request) 
 	{
 		$output = [];
 		
