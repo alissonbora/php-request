@@ -12,12 +12,8 @@ class UploadedFile {
 	
 	public function __construct($files = [])
 	{
-		$vars = ["name", "tmp_name", "type", "size", "error"];
-		
-		foreach ($vars as $var) {
-			if (array_key_exists($var, $files)) {
-				$this->$key = $value;
-			}
+		foreach ($files as $key => $value) {
+			$this->$key = $value;
 		}
 
 		if ($this->isValid() == false) {
@@ -35,7 +31,7 @@ class UploadedFile {
 		$extension = strtolower(pathinfo($this->name, PATHINFO_EXTENSION));
 		
 		if ($extension == "") {
-			require_once "mime_types.php");
+			require_once "mime_types.php";
 			
 			$allowed = array_filter($mime_types, function($key) use ($mimes) {
 				return in_array($key, $mimes);
