@@ -1,0 +1,22 @@
+{
+    "name": "alissonbora/request",
+    "type": "library",
+    "description": "A simple PHP request library.",
+    "keywords": ["request", "http"],
+    "homepage": "http://github.com/alissonbora/php-request",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alisson Bora",
+            "email": "alissonbora.94@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlissonBora\\Request": "src/"
+        }
+    }
+}
