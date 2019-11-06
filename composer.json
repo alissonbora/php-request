@@ -2,7 +2,7 @@
     "name": "alissonbora/request",
     "type": "library",
     "description": "A simple PHP request library.",
-    "keywords": ["request", "http", "get", "post", "files"],
+    "keywords": ["request", "http"],
     "homepage": "http://github.com/alissonbora/php-request",
     "license": "MIT",
     "authors": [
@@ -12,7 +12,8 @@
         }
     ],
     "require": {
-        "php": ">=7.0"
+        "php": "^7.2",
+		"illuminate/http": "^6.0"
     },
     "autoload": {
         "psr-4": {
